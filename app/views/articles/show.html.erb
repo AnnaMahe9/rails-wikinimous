@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+<a href="/articles"><i class="fa-solid fa-house"></i></a>
+<%# <%= link_to 'Retour à la liste', articles_path %>
+<%= link_to 'Mettre à jour', edit_article_path %>
+<%= link_to 'Supprimer', article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
